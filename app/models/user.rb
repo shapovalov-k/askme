@@ -10,11 +10,11 @@ class User < ApplicationRecord
 
   has_many :questions
 
-  validates :username, format: { with: VALID_USERNAME, message: "username allows latin letters, numbers and sign _" }, length: { maximum: 40 }
+  validates :username, format: { with: VALID_USERNAME }, length: { maximum: 40 }
 
   validates :email, :username, presence: true
   validates :email, :username, uniqueness: true
-  validates :email, format: { with: VALID_EMAIL, message: "only allows correct format of email" }
+  validates :email, format: { with: VALID_EMAIL }
 
   validates :password, presence: true, on: :create
   validates_confirmation_of :password
