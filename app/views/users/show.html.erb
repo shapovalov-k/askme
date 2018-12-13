@@ -38,6 +38,10 @@
 <div class="column-3-4">
   <div class="user-questions buffer-both">
     <div class="questions-list">
+      <% number = @questions.count %>
+      <h2 class="questions-padding-left"> <%= "У Вас #{number} #{declension(number, 'вопрос', 'вопроса', 'вопросов')}" %></h2>
+    </div>
+    <div class="questions-list">
       <% @questions.each do |question| %>
         <%= render partial: 'questions/question', object: question %>
       <% end %>
