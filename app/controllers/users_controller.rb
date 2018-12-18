@@ -25,6 +25,7 @@ class UsersController < ApplicationController
     # отправляем его на главную с сообщением.
     redirect_to root_url, alert: 'Вы уже залогинены' if current_user.present?
 
+
     # Иначе, создаем болванку нового пользователя.
     @user = User.new
   end
@@ -45,6 +46,7 @@ class UsersController < ApplicationController
       # Если удалось, отправляем пользователя на главную с сообщение, что
       # пользователь создан.
       redirect_to root_url, notice: 'Пользователь успешно зарегестрирован!'
+      #redirect_to action: "show", id: @user.id #, notice: 'Пользователь успешно зарегестрирован!'
     else
       # Если не удалось по какой-то причине сохранить пользователя, то рисуем
       # (обратите внимание, это не редирект), страницу new с формой
