@@ -6,6 +6,8 @@ ruby '2.4.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1', '>= 5.2.1.1'
 
+gem 'rails_12factor'
+
 gem 'uglifier'
 
 # Use Puma as the app server
