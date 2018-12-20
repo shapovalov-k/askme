@@ -16,6 +16,8 @@ class User < ApplicationRecord
   validates :email, :username, uniqueness: true
   validates :email, format: { with: VALID_EMAIL }
 
+  validates :bground_color, format: { with: /\A#[\h]{6}\z/ }
+
   validates :password, presence: true, on: :create
   validates_confirmation_of :password
 
