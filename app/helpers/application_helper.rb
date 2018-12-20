@@ -19,7 +19,6 @@ module ApplicationHelper
     return voprosov if (remainder_10.between?(5,9) || remainder_10 == 0)
   end
 
-  # Хелпер, рисующий span тэг с иконкой из font-awesome
   def fa_icon(icon_class)
     content_tag 'span', '', class: "fa fa-#{icon_class}"
   end
