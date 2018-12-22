@@ -26,6 +26,10 @@
 .question-answer {
 }
 
+.question-author {
+    color: #202020;
+}
+
 .question-date {
   color: #a0a0a0;
   font-size: 12px;
